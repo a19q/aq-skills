@@ -1,0 +1,34 @@
+# 前端项目 VSCode 插件清单
+# 格式：每行一个插件 ID（publisher.extension）。# 开头为注释，脚本会忽略。
+# 来源：ide setting/extensions/frontend.md（已从 extensions.json 提取为纯 ID 列表）
+
+# ── 语言/框架 ──
+vue.volar                                     # Vue 3 官方支持（Volar）
+infeng.vscode-react-typescript                # React + TS 片段
+msjsdiag.vscode-react-native                  # React Native
+dotjoshjohnson.xml                            # XML 支持
+
+# ── 代码质量（对应 settings 的 eslint/prettier）──
+dbaeumer.vscode-eslint                        # ESLint
+esbenp.prettier-vscode                        # Prettier 格式化
+streetsidesoftware.code-spell-checker         # 拼写检查
+editorconfig.editorconfig                     # .editorconfig 支持
+
+# ── 样式 ──
+bradlc.vscode-tailwindcss                     # Tailwind CSS 智能提示
+voorjaar.windicss-intellisense                # WindiCSS 智能提示
+cipchk.cssrem                                 # px ↔ rem 转换
+clinyong.vscode-css-modules                   # CSS Modules 跳转
+
+# ── HTML 编辑效率 ──
+formulahendry.auto-close-tag                  # 自动闭合标签
+bradgashler.htmltagwrap                       # 标签包裹
+
+# ── 编辑器通用 ──
+christian-kohler.path-intellisense            # 路径补全
+mint.code-navigator                           # 代码导航
+zhucy.project-tree                            # 项目结构树
+vscode-icons-team.vscode-icons                # 文件图标
+eamodio.gitlens                               # Git 增强
+ms-azuretools.vscode-containers               # Docker/容器
+ms-ceintl.vscode-language-pack-zh-hans        # 中文（简体）语言包

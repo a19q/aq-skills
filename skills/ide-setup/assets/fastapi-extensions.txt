@@ -1,0 +1,33 @@
+# FastAPI（Python）项目 VSCode 插件清单
+# 格式：每行一个插件 ID（publisher.extension）。# 开头为注释，脚本会忽略。
+# 来源：ide setting/extensions/fastapi.md（已从 extensions.json 提取为纯 ID 列表）
+
+# ── Python 语言核心 ──
+ms-python.python                              # Python 主插件
+ms-python.vscode-pylance                      # Python 语言服务/类型分析
+ms-python.vscode-python-envs                  # Python 环境管理
+ms-python.debugpy                             # Python 调试器
+
+# ── 格式化与检查（对应 settings 的 black/flake8/isort）──
+ms-python.black-formatter                     # Black 格式化
+ms-python.flake8                              # Flake8 代码检查
+ms-python.isort                               # isort 导入排序
+
+# ── FastAPI 辅助 ──
+renzz.fastapi                                 # FastAPI 支持
+damildrizzy.fastapi-snippets                  # FastAPI 代码片段
+mostafarm7.fastapi-runner                     # FastAPI 运行器（对应 fastapi-runner.* 设置）
+
+# ── 编辑器通用 ──
+editorconfig.editorconfig                     # .editorconfig 支持
+yzhang.markdown-all-in-one                    # Markdown 写作
+seepine.md-editor                             # Markdown 实时预览
+zhucy.project-tree                            # 项目结构树
+vscode-icons-team.vscode-icons                # 文件图标
+streetsidesoftware.code-spell-checker         # 拼写检查
+eamodio.gitlens                               # Git 增强
+ms-azuretools.vscode-containers               # Docker/容器
+ms-vscode-remote.remote-containers            # Dev Containers
+ms-vscode.remote-server                       # 远程服务端
+ms-vscode.remote-explorer                      # 远程资源管理器
+ms-ceintl.vscode-language-pack-zh-hans        # 中文（简体）语言包

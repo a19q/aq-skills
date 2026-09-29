@@ -1,0 +1,22 @@
+{
+  "model": "opus",
+  "effortLevel": "max",
+  "editorMode": "vim",
+  "statusLine": {
+    "type": "command",
+    "command": "jq -r '\"[\\(.model.display_name)] \\(.context_window.used_percentage // 0)% context\"'",
+    "padding": 2
+  },
+  "spinnerTipsEnabled": false,
+  "permissions": {
+    "allow": ["Bash(git diff *)", "Read(~/.zshrc)"]
+  },
+  "autoUpdatesChannel": "stable",
+  "includeCoAuthoredBy": false,
+  "env": {
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "258000",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "90"
+  }
+}

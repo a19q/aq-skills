@@ -1,0 +1,59 @@
+{
+  // ===== ESLint =====
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [],
+  "eslint.codeActionsOnSave.rules": null,
+
+  // ===== Prettier =====
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "auto",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.jsxSingleQuote": false,
+  "prettier.trailingComma": "all",
+  // 项目专属：monorepo 下指定 prettier 实现路径。
+  // 普通项目请删除此行，否则 Prettier 会因找不到路径而失效。
+  "prettier.prettierPath": "./packages/compiler/node_modules/prettier/index.cjs",
+
+  // ===== Tailwind CSS =====
+  "tailwindCSS.experimental.classRegex": [
+    ["className:\\s*[\"'`]([^\"'`]*)[\"'`]"],
+    ["classNames\\s*:\\s*\\{([^}]+)\\}", ":\\s*[\"'`]([^\"'`]*)[\"'`]"],
+    ["classNames\\s*=\\s*\\{\\{([\\s\\S]*?)\\}\\}", ":\\s*[\"'`]([^\"'`]*)[\"'`]"]
+  ],
+
+  // ===== Vetur（仅 Vue 2 项目需要；Vue 3 用 vue.volar，请删除本段）=====
+  "vetur.validation.script": false,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto"
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  },
+
+  // ===== 文件专属 =====
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "never"
+    }
+  },
+
+  // ===== JS/TS 内置语言设置 =====
+  "js/ts.format.insertSpaceBeforeFunctionParenthesis": true,
+  "js/ts.updateImportsOnFileMove.enabled": "prompt"
+}
