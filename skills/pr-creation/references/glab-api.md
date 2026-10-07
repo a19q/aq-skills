@@ -67,6 +67,21 @@ glab api "users?username=<USERNAME>"
 # 取当前登录用户（默认取认证用户作为本人）
 ```
 
+## 远端预检（正式场景执行前，只读）
+
+```bash
+# 当前所在分支
+git branch --show-current
+
+# 远端是否已有同名分支（有输出即存在）
+git ls-remote --heads origin <BRANCH>
+
+# 该分支是否已有打开的 MR
+glab mr list -R "${NS_REPO}" -s <BRANCH> --state opened
+```
+
+命中任一项即**停止并汇报**，不改分支、不推送、不建 MR，等用户指示。
+
 ## 创建 Issue
 
 ```bash
@@ -124,6 +139,23 @@ glab api --method POST "projects/${PROJECT_ID}/merge_requests/${MR_IID}/approval
   -f "name=Minimum required approvals" \
   -f "approvals_required=<APPROVALS>" \
   -f "rule_type=any_approver"
+```
+
+## 补设 label（用户确认后）
+
+用户确认要绑定标签时执行；未确认不主动设。
+
+```bash
+# 查项目已有标签（确认标签名存在）
+glab api "projects/${PROJECT_ID}/labels?per_page=100"
+
+# 给 MR 加标签（逗号分隔多个）
+glab api --method PUT "projects/${PROJECT_ID}/merge_requests/${MR_IID}" \
+  -f "add_labels=<LABEL>"
+
+# 给 Issue 加标签
+glab api --method PUT "projects/${PROJECT_ID}/issues/<ISSUE_IID>" \
+  -f "add_labels=<LABEL>"
 ```
 
 ## 安全字段检查（命中即终止，不 commit/push/MR）
